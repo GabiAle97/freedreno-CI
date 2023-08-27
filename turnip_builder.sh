@@ -57,7 +57,7 @@ cd mesa-main
 
 echo "Creating meson cross file ..." $'\n'
 ndk="$workdir/$ndkver/toolchains/llvm/prebuilt/linux-x86_64/bin"
-cat <<EOF >"aarch64-linux-gnu"
+cat <<EOF >"cross32.txt"
 [binaries]
 c = 'aarch64-linux-gnu-gcc'
 cpp = 'aarch64-linux-gnu-g++'
@@ -71,7 +71,7 @@ cpu = 'aarch64'
 endian = 'little'
 EOF
 
-cat <<EOF >"arm-linux-gnueabihf"
+cat <<EOF >"cross64.txt"
 [binaries]
 c = 'arm-linux-gnueabihf-gcc'
 cpp = 'arm-linux-gnueabihf-g++'
